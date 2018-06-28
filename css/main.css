@@ -20,8 +20,8 @@ body, html {
 
 @media (max-width: 500px) {
 .tile-container {
-width: 200px;
-height: 200px;
+width: 300px;
+height: 300px;
 
 }
 
