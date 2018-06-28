@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Eater');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body, html {
+  width: 100%;
+  background-color: #0f120c;
+  cursor: url(../image/calavera.gif), auto;
+}
+
+.tile-container {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #34495e;
+  color: #eceada;
+  border: 6px solid #240c57;
+  border-radius: 10px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+@media (max-width: 500px) {
+.tile-container {
+width: 200px;
+height: 200px;
+
+}
+
+}
+
+.tile {
+  border: 6px solid #240c57;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.x-mark {
+  background: #eceada url("../image/icon-o.png");
+  background-repeat: no-repeat;
+  text-align: center;
+	background-position: center center;
+}
+
+.o-mark {
+  background: #eceada url("../image/icon-x.png");
+  background-repeat: no-repeat;
+  text-align: center;
+	background-position: center center;
+}
+
+div#game-result {
+  clear: both;
+  margin-top: 20px;
+  padding: 10px;
+  display: none;
+  /* background: none; */
+}
+
+div#game-result.win {
+  background: #1d5e6c;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+div#game-result.lost {
+  background: #a71212;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.reset {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title{
+color: #eceada;
+text-align: center;
+font-family: 'Eater', cursive;
+font-size: 2vw;
+
+}
