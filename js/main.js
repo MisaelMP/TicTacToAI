@@ -1,12 +1,13 @@
-const computerTurn = function () {
+const computerTurn = function() {
   const choose = $(".tile:not(.marked)");
   randChoice = choose[Math.floor(Math.random() * choose.length)];
   $(randChoice).addClass('marked');
   $(randChoice).addClass('o-mark');
   trackTicTac(randChoice, 'o-mark');
+
 }
 
-const resetTicTacToe = function () {
+const resetTicTacToe = function() {
   $(".tile").removeClass("marked");
   $(".tile").removeClass("o-mark");
   $(".tile").removeClass("x-mark");
@@ -17,7 +18,7 @@ const resetTicTacToe = function () {
   finished = false;
 }
 
-const trackTicTac = function (obj, mark) {
+const trackTicTac = function(obj, mark) {
   const winning_probability = [
     [1, 2, 3],
     [1, 4, 7],
@@ -66,7 +67,7 @@ $(document).ready(function() {
         $(this).addClass('marked');
         $(this).addClass('x-mark');
         finished = trackTicTac(this, 'x-mark');
-        computerTurn();
+        setTimeout(computerTurn, 1000);
       }
     }
   });
